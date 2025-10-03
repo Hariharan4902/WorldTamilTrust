@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>தமிழ் Navbar</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tamil Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla+Tamil+Inclined:wght@400;700&family=Noto+Sans+Tamil:wght@400;700&display=swap"
+    rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="Images/logo.png" alt="Logo" height="90">
+      </a>
+
+      <!-- Toggle button -->
+      <button class="navbar-toggler" type="button" onclick="toggleMenu()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu Items -->
+      <div id="navbarNav">
+        <ul class="navbar-nav ms-auto" id="menu">
+          <!-- Scroll links -->
+          <li class="nav-item"><a class="nav-link" href="Home.html#home">முகப்பு</a></li>
+          <li class="nav-item"><a class="nav-link" href="Home.html#about">எங்கள் செயல்பாடுகள்</a></li>
+          <li class="nav-item"><a class="nav-link" href="Home.html#schemes">திட்டங்கள்</a></li>
+          <li class="nav-item"><a class="nav-link" href="Home.html#contact">தொடர்புக்கு</a></li>
+
+         <!-- Redirect links -->
+          <li class="nav-item"><a class="nav-link" href="support.html">உதவி கோரிக்கை</a></li>
+          <li class="nav-item"><a class="nav-link" href="donate.html">நன்கொடை</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">நிகழ்வுகள்</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">உள்நுழைவு</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Home  Sections -->
+  <section id="home" class="home-section d-flex align-items-center text-center text-white">
+    <div class="container home-content">
+      <h2 class="fw-bold text-danger mb-4">உலகத் தமிழ் அறக்கட்டளை</h2>
+      <p class="lead">
+        "அன்புடையீர், வரும் 2023 சூன் மாதம் 22ம் நாள் <br>
+        உலகத் தமிழ் அறக்கட்டளையின் மூன்றாவது <br>
+        மாநாடு நடைபெறுவதை பெருமகிழ்ச்சியுடன் அறிவிக்கிறோம். <br>
+        இம்மாநாட்டின் குழுவில் பங்கேற்கும் சிறப்பினைக் கூர்ந்து பணிவன்புடன் அழைக்கிறோம்."
+      </p>
+      <p class="fw-bold">"தங்களின் அன்புடன்"</p>
+      <p class="fw-bold">"வா.மு.வேந்தர் மணிவண்ணன்"</p>
+      <p class="fw-bold">"நிறுவனர், உலகத் தமிழ் அறக்கட்டளை"</p>
+      <p class="fst-italic">உலகத் தமிழ் அறக்கட்டளை குழுமினர்</p>
+    </div>
+  </section>
+  
+  
+  <section id="about" class="about-section py-5"> 
+    <div class="container text-center">
+      <!-- Heading -->
+      <h2 class="fw-bold mb-3">எங்கள் செயல்பாடுகள்</h2>
+      <p class="text-danger mb-5">
+        உலகம் முழுவதும் தமிழ் சமூகத்தின் பெருமை, ஆர்வம் மற்றும் ஒற்றுமைப்பிணை காண்க.
+      </p>
+  
+      <!-- Gallery Grid -->
+      <div class="row g-4">
+        <!-- Card 1 - நெசவு -->
+        <div class="col-md-4 col-sm-6">
+          <div class="about-card">
+            <img src="Images/nesavu.jfif" class="img-fluid" alt="நெசவு">
+            <div class="overlay">நெசவு</div>
+          </div>
+        </div>
+  
+        <!-- Card 2 - கோத்து நடனம் -->
+        <div class="col-md-4 col-sm-6">
+          <div class="about-card">
+            <img src="Images/kotthu.jfif" class="img-fluid" alt="கோத்து நடனம்">
+            <div class="overlay">கோத்து நடனம்</div>
+          </div>
+        </div>
+  
+        <!-- Card 3 - ஆயுர்வேதம் -->
+        <div class="col-md-4 col-sm-6">
+          <div class="about-card">
+            <img src="Images/Ayurveda.jfif" class="img-fluid" alt="ஆயுர்வேதம்">
+            <div class="overlay">ஆயுர்வேதம்</div>
+          </div>
+        </div>
+  
+        <!-- Card 4 - விவசாயம் -->
+        <div class="col-md-4 col-sm-6">
+          <div class="about-card">
+            <img src="Images/vivasayam.jpeg" class="img-fluid" alt="விவசாயம்">
+            <div class="overlay">விவசாயம்</div>
+          </div>
+        </div>
+  
+        <!-- Card 5 - மண் பானைகள் -->
+        <div class="col-md-4 col-sm-6">
+          <div class="about-card">
+            <img src="Images/pots.jfif" class="img-fluid" alt="மண் பானைகள்">
+            <div class="overlay">மண் பானைகள்</div>
+          </div>
+        </div>
+  
+        <!-- Card 6 - பாரதநாட்டியம் -->
+        <div class="col-md-4 col-sm-6">
+          <div class="about-card">
+            <img src="Images/Bharathnathyam.jfif" class="img-fluid" alt="பாரதநாட்டியம்">
+            <div class="overlay">பாரதநாட்டியம்</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section id="schemes" class="section bg-dark text-white">
+    <h1>திட்டங்கள்</h1>
+  </section>
+
+
+  <section class="py-5" id="contact">
+    <div class="container">
+      <div class="row g-5">
+  
+        <!-- Form Section -->
+        <div class="col-md-7 col-lg-7">
+          <h2 class="h3 fw-bold">தொடர்பு கொள்ளவும்</h2>
+          
+          <form action="#" class="row g-3">
+            <div class="col-12">
+              <label for="name" class="form-label">பெயர் :</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="பெயரை உள்ளிடவும்">
+            </div>
+            <div class="col-12">
+              <label for="email" class="form-label">மின்னஞ்சல் ஐடி :</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="மின்னஞ்சலை உள்ளிடவும்">
+            </div>
+            <div class="col-12">
+              <label for="subject" class="form-label">பொருள் :</label>
+              <input type="text" class="form-control" id="subject" name="subject" placeholder="பொருளை உள்ளிடவும்">
+            </div>
+            <div class="col-12">
+              <label for="message" class="form-label">செய்தி :</label>
+              <textarea class="form-control" id="message" name="message" rows="4" placeholder="செய்தியை உள்ளிடவும்"></textarea>
+            </div>
+            <div class="col-12 pt-3">
+              <button type="submit" class="btn btn-danger w-100 fw-bold py-2 shadow-sm">சமர்ப்பிக்கவும்</button>
+            </div>
+          </form>
+        </div>
+  
+        <!-- Info Section -->
+        <div class="col-md-5 col-lg-5">
+          <div class="d-grid gap-4">
+            
+            <div class="info-card">
+              <div class="info-icon">
+                📞
+              </div>
+              <div>
+                <p class="mb-0 fw-semibold">கைபேசி எண்</p>
+                <a href="tel:2078767452" class="text-muted text-decoration-none small">207-8767-452</a>
+              </div>
+            </div>
+  
+            <div class="info-card">
+              <div class="info-icon">
+                ✉️
+              </div>
+              <div>
+                <p class="mb-0 fw-semibold">மின்னஞ்சல் ஐடி</p>
+                <a href="mailto:support@yoursite.com" class="text-muted text-decoration-none small">support@yoursite.com</a>
+              </div>
+            </div>
+  
+            <div class="info-card">
+              <div class="info-icon">
+                📍
+              </div>
+              <div>
+                <p class="mb-0 fw-semibold">இடம்</p>
+                <address class="text-muted small mb-0">2443 Oak Ridge Omaha, GA 45065</address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+  <footer class="footer-section py-5">
+    <div class="container">
+        
+        <div class="row align-items-center">
+
+            <div class="col-12 col-md-4 text-center text-md-start mb-4 mb-md-0">
+                <img src="Images/logo.png" alt="World Tamil Trust Logo" class="footer-logo mb-2">
+            </div>
+
+            <div class="col-12 col-md-5 text-center text-md-start mb-4 mb-md-0">
+                <p class="footer-links mb-2">.
+                    <a href="#">பயன்பாட்டு விதிகள்</a> · 
+                    <a href="#">தனியுரிமைக் கொள்கை</a>
+                </p>
+                <p class="footer-copyright mb-0">
+                    © உலக தமிழ் நம்பிக்கை 2023. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.
+                </p>
+            </div>
+
+            <div class="col-12 col-md-3 text-center text-md-end">
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <i class="bi bi-instagram"></i> 
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="bi bi-x"></i> 
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+ 
+
+  <!-- Bootstrap JS (needed only for toggler icon styles, not collapse) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+
+</html>
