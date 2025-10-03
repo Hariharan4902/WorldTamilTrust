@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "private": true,
     "homepage": "https://hariharan4902.github.io/WorldTamilTrust",
+
     "scripts": {
         "deploy": "gh-pages -d ."
     },
