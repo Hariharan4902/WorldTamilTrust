@@ -1,0 +1,13 @@
+{
+    "name": "worldtamiltrust",
+    "version": "1.0.0",
+    "private": true,
+    "homepage": "https://hariharan4902.github.io/WorldTamilTrust",
+
+    "scripts": {
+        "deploy": "gh-pages -d ."
+    },
+    "devDependencies": {
+        "gh-pages": "^6.3.0"
+    }
+}
