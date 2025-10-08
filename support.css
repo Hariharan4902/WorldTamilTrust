@@ -1,0 +1,91 @@
+/* Navbar base */
+.custom-navbar {
+  padding: 30px 60px;
+  transition: all 0.4s ease;
+}
+
+/* Desktop default */
+@media (min-width: 992px) {
+  #navbarNav {
+    display: block !important; /* Always visible */
+    max-height: none !important;
+  }
+
+  .custom-navbar {
+    background: transparent !important;
+  }
+
+
+    /* 🖥 Desktop Nav Links – Spacing & Font */
+@media (min-width: 992px) {
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;  /* ✅ Increased space between nav links */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 15px;       /* ✅ Reduced font size slightly */
+    font-weight: 500;
+    padding: 6px 0;       /* less vertical padding for tighter alignment */
+    transition: color 0.3s ease;
+  }
+}
+  /* Nav links for desktop default (transparent navbar) */
+  .custom-navbar .nav-link {
+    color: #fff !important; /* white text when transparent */
+    transition: color 0.3s ease; /* smooth hover/active */
+  }
+  .custom-navbar .nav-link:hover {
+    color: #d9534f !important; /* red hover on transparent */
+  }
+  .custom-navbar .nav-link.active {
+    color: #007bff !important; /* blue active on transparent */
+  }
+
+  .custom-navbar.scrolled {
+    background: white !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  /* Nav links when scrolled (white navbar) */
+  .custom-navbar.scrolled .nav-link {
+    color: #000 !important; /* black text when background white */
+    transition: color 0.3s ease; /* smooth hover/active */
+  }
+  .custom-navbar.scrolled .nav-link:hover {
+    color: #d9534f !important; /* red hover when scrolled */
+  }
+  .custom-navbar.scrolled .nav-link.active {
+    color: #007bff !important; /* blue active when scrolled */
+  }
+}
+
+/* Mobile animation */
+#navbarNav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+#navbarNav.show {
+  max-height: 500px; /* adjust as needed */
+}
+
+/* Mobile navbar background */
+@media (max-width: 991px) {
+  .custom-navbar {
+    background: white !important;
+    box-shadow: none !important;
+  }
+
+  .custom-navbar .nav-link {
+    color: #000 !important; /* mobile links always black */
+    transition: color 0.3s ease; /* smooth hover/active */
+  }
+  .custom-navbar .nav-link:hover {
+    color: #d9534f !important; /* red hover mobile */
+  }
+  .custom-navbar .nav-link.active {
+    color: #007bff !important; /* blue active mobile */
+  }
+}

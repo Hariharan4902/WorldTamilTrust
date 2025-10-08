@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>உதவி கோரிக்கை</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla+Tamil+Inclined:wght@400;700&family=Noto+Sans+Tamil:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar white-navbar">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="Home.html">
+                <img src="Images/logo.png" alt="Logo" height="90">
+            </a>
+
+            <!-- Toggle button -->
+            <button class="navbar-toggler" type="button" onclick="toggleMenu()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu Items -->
+            <div id="navbarNav">
+                <ul class="navbar-nav ms-auto" id="menu">
+                    <li class="nav-item"><a class="nav-link" href="Home.html#home">முகப்பு</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Home.html#about">எங்கள் செயல்பாடுகள்</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Home.html#schemes">திட்டங்கள்</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Home.html#contact">தொடர்புக்கு</a></li>
+
+                    <li class="nav-item"><a class="nav-link active" href="support.html">உதவி கோரிக்கை</a></li>
+                    <li class="nav-item"><a class="nav-link" href="donate.html">நன்கொடை</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">நிகழ்வுகள்</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">உள்நுழைவு</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ✅ Support Form Section -->
+    <section class="support-section mt-5 py-5">
+        <div class="container mt-5 pt-5">
+            <h2 class=" fw-bold text-center  ">
+                உதவி கோரிக்கை
+            </h2><div class="underline"></div>
+
+            <div class="card shadow-lg p-4">
+                <h5 class="text-danger mb-3">தனிப்பட்ட விவரங்கள்</h5>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">பெயர்</label>
+                        <input type="text" class="form-control" placeholder="பெயரை உள்ளிடவும்">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">மின்னஞ்சல்</label>
+                        <input type="email" class="form-control" placeholder="மின்னஞ்சலை உள்ளிடவும்">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">கைபேசி எண்</label>
+                        <input type="text" class="form-control" placeholder="கைபேசி எண்ணை உள்ளிடவும்">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">தொகை</label>
+                        <input type="number" class="form-control" placeholder="தொகையை உள்ளிடவும்">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">தேவையின் வகை</label>
+                        <select class="form-select">
+                            <option>உதவி 1</option>
+                            <option>உதவி 2</option>
+                            <option>உதவி 3</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">கோரிக்கை வகை</label>
+                        <select class="form-select">
+                            <option>சுயம்</option>
+                            <option>மற்றவர்</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">தொடர்பு முகவரி</label>
+                        <textarea class="form-control" rows="3" placeholder="முகவரியை உள்ளிடவும்"></textarea>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">விவரங்கள்</label>
+                        <textarea class="form-control" rows="3" placeholder="விவரங்களை உள்ளிடவும்"></textarea>
+                    </div>
+                </div>
+
+                <h5 class="text-danger mb-3">அடையாள சரிபார்ப்பு</h5>
+                <div class="mb-3">
+                    <label class="form-label">ஆவணங்களை இணைக்கவும்</label>
+                    <input type="file" class="form-control">
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-danger px-5">சமர்ப்பிக்க</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"> </script>
+
+
+
+</body>
+
+</html>

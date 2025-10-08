@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SignUp</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla+Tamil+Inclined:wght@400;700&family=Noto+Sans+Tamil:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="sign.css">
+</head>
+<body>
+
+  <div class="signup-container d-flex align-items-center justify-content-center min-vh-100">
+    <section class="personal-details-section w-100">
+      <div class="container">
+        <div class="form-box mx-auto p-4 shadow-sm">
+          <h4 class="section-title mb-3 text-center">👤 தனிப்பட்ட விவரங்கள்</h4>
+
+          <form>
+            <div class="row g-3">
+              <!-- Name -->
+              <div class="col-md-3">
+                <label for="name" class="form-label">பெயர்</label>
+                <input type="text" id="name" class="form-control" placeholder="பெயரை உள்ளிடவும்" >
+              </div>
+              
+              <div class="col-md-3">
+                <label for="Dob" class="form-label">பிறந்த தேதி</label>
+                <input type="text" id="Dob" class="form-control" >
+              </div>
+              
+              <div class="col-md-3">
+                <label for="PhNo" class="form-label">தொலைபேசி எண்</label>
+                <input type="number" id="PhNo" class="form-control" >
+              </div>
+              
+              <!-- Email -->
+              <div class="col-md-3">
+                <label for="email" class="form-label">மின்னஞ்சல்</label>
+                <input type="email" id="email" class="form-control" >
+              </div>
+
+              <!-- Address -->
+              <div class="col-md-6">
+                <label for="address" class="form-label">முகவரி</label>
+                <textarea id="address" class="form-control" rows="2" placeholder="உங்கள் முகவரியை உள்ளிடவும்"></textarea>
+              </div>
+
+              <!-- About -->
+              <div class="col-md-6">
+                <label for="about" class="form-label">உங்களைப் பற்றி</label>
+                <textarea id="about" class="form-control" rows="2" placeholder="சுருக்கமாக எழுதவும்"></textarea>
+              </div>
+
+              <!-- Type -->
+              <div class="col-md-6">
+                <label for="type" class="form-label">வகை</label>
+                <select id="type" class="form-select">
+                  <option>தானியாளர்</option>
+                  <option>பெறுநர்</option>
+                </select>
+              </div>
+
+              <!-- Donor Options -->
+              <div class="col-md-6">
+                <label for="donor" class="form-label">தான வகை</label>
+                <select id="donor" class="form-select" multiple>
+                  <option>நிதி</option>
+                  <option>கடன்</option>
+                  <option>ஆலோசகர்</option>
+                  <option>மற்றவை</option>
+                </select>
+              </div>
+
+              <!-- Password -->
+              <div class="col-md-6">
+                <label for="password" class="form-label">கடவுச்சொல்</label>
+                <input type="password" id="password" class="form-control" placeholder="கடவுச்சொல்லை உள்ளிடவும்">
+              </div>
+
+              <!-- Confirm Password -->
+              <div class="col-md-6">
+                <label for="confirmPassword" class="form-label">கடவுச்சொல்லை உறுதிசெய்க</label>
+                <input type="password" id="confirmPassword" class="form-control" placeholder="கடவுச்சொல்லை மீண்டும் உள்ளிடவும்">
+              </div>
+
+              <!-- ID Verification -->
+              <div class="col-12">
+                <label for="idProof" class="form-label id-label">📝 அடையாள சரிபார்ப்பு</label>
+                <input type="file" id="idProof" class="form-control">
+              </div>
+
+              <div>
+                ஏற்கனவே பதிவு செய்தீர்களா? <a  style="text-decoration: none;" href="./login.html">உள்நுழையவும்!</a>
+              </div>
+              
+
+              <!-- Submit -->
+              <div class="col-12 text-center mt-3">
+                <button type="submit" class="btn btn-submit px-5 py-2">சமர்ப்பிக்க</button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,569 @@
+/* Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Latha", "Noto Sans Tamil", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Navbar base */
+.custom-navbar {
+  padding: 30px 60px;
+  transition: all 0.4s ease;
+}
+
+/* Desktop default */
+@media (min-width: 992px) {
+  #navbarNav {
+    display: block !important; /* Always visible */
+    max-height: none !important;
+  }
+
+  /* 🖥 Desktop Nav Links – Spacing & Font */
+@media (min-width: 992px) {
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;  /* ✅ Increased space between nav links */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 15px;       /* ✅ Reduced font size slightly */
+    font-weight: 500;
+    padding: 6px 0;       /* less vertical padding for tighter alignment */
+    transition: color 0.3s ease;
+  }
+}
+
+  .custom-navbar {
+    background: transparent !important;
+    display: flex;
+    align-items: center;
+    gap: 30px;  
+  }
+
+  /* Nav links for desktop default (transparent navbar) */
+  .custom-navbar .nav-link {
+    color: #fff !important; /* white text when transparent */
+    font-size: 15px;       /* ✅ Reduced font size slightly */
+    font-weight: 500;
+    padding: 6px 0; 
+    transition: color 0.3s ease; /* smooth hover/active */
+  }
+  .custom-navbar .nav-link:hover {
+    color: #d9534f !important; /* red hover on transparent */
+  }
+  .custom-navbar .nav-link.active {
+    color: #007bff !important; /* blue active on transparent */
+  }
+
+  .custom-navbar.scrolled {
+    background: white !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  /* Nav links when scrolled (white navbar) */
+  .custom-navbar.scrolled .nav-link {
+    color: #000 !important; /* black text when background white */
+    transition: color 0.3s ease; /* smooth hover/active */
+  }
+  .custom-navbar.scrolled .nav-link:hover {
+    color: #d9534f !important; /* red hover when scrolled */
+  }
+  .custom-navbar.scrolled .nav-link.active {
+    color: #007bff !important; /* blue active when scrolled */
+  }
+}
+
+/* Mobile animation */
+#navbarNav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+#navbarNav.show {
+  max-height: 500px; /* adjust as needed */
+}
+
+/* Mobile navbar background */
+@media (max-width: 991px) {
+  .custom-navbar {
+    background: white !important;
+    box-shadow: none !important;
+  }
+
+  .custom-navbar .nav-link {
+    color: #000 !important; /* mobile links always black */
+    transition: color 0.3s ease; /* smooth hover/active */
+  }
+  .custom-navbar .nav-link:hover {
+    color: #d9534f !important; /* red hover mobile */
+  }
+  .custom-navbar .nav-link.active {
+    color: #007bff !important; /* blue active mobile */
+  }
+}
+
+
+/* ✅ Force White Navbar for non-home pages */
+.custom-navbar.white-navbar {
+  background: white !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.custom-navbar.white-navbar .nav-link {
+  color: #000 !important;
+  transition: color 0.3s ease;
+}
+
+.custom-navbar.white-navbar .nav-link:hover {
+  color: #d9534f !important;
+}
+
+.custom-navbar.white-navbar .nav-link.active {
+  color: #007bff !important;
+}
+
+
+
+
+/* Sections */
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+/* Home Section */
+
+/* Home Section */
+.home-section {
+  min-height: 100vh; /* allow section to expand naturally */
+  background: url("Images/home.jfif") no-repeat center center/cover;
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 40px; /* extra space for mobile */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home-section::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6); /* dark overlay */
+}
+
+.home-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;   /* keep text nicely centered */
+  margin: 0 auto;
+  padding: 0 15px;    /* prevent touching screen edges on mobile */
+}
+
+/* Heading Tamil Font */
+h2 {
+  font-family: 'Karla Tamil Inclined', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+/* Paragraph Tamil Font */
+.home-section p {
+  font-family: 'Noto Sans Tamil', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+  .home-section {
+    padding-top: 100px;
+  }
+  .home-section h2 {
+    font-size: 1.6rem;
+  }
+  .home-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+
+/* About Section */
+.about-section h2 {
+  font-family: 'Karla Tamil Inclined', sans-serif;
+  font-size: 2rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.about-section p {
+  font-family: 'Noto Sans Tamil', sans-serif;
+  font-size: 1.1rem;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Image Card */
+.about-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.about-card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.about-card:hover img {
+  transform: scale(1.1);
+}
+.about-card img {
+  width: 100%;
+  height: 250px; /* fixed uniform height */
+  object-fit: cover; /* crop nicely without stretching */
+  transition: transform 0.5s ease;
+}
+
+
+/* Overlay text */
+.about-card .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.about-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Section basic styling */
+.schemes-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fff;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.underline {
+  width: 60px;
+  height: 3px;
+  background-color: #f25c44;
+  margin: 0 auto 40px;
+}
+
+/* Schemes grid layout */
+.schemes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.scheme-item {
+  flex: 1 1 200px;
+  max-width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.scheme-item .icon {
+  font-size: 48px;
+  color: #f25c44;
+  display: block;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+/* Animation on hover */
+.scheme-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.scheme-item:hover .icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.scheme-item h4 {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+}
+
+/* ✅ Responsive for tablets and mobile */
+@media (max-width: 992px) {
+  .schemes {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .schemes {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .scheme-item {
+    max-width: 90%;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+}
+
+
+/* CONTACT */
+
+body {
+  background: #f8f9fa;
+}
+#contact {
+  background: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+#contact h2 {
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+#contact .form-control {
+  border-radius: 5px;
+}
+#contact button {
+  font-size: 18px;
+  border-radius: 5px;
+}
+.info-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.info-icon {
+  background: #dc3545;
+  padding: 10px;
+  border-radius: 50%;
+  color: #fff;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+}
+iframe {
+  border: 0;
+}
+
+
+/* 1. Banner Styling (The background image area) */
+.donation-banner {
+  /* Replace 'path/to/your/banner_background_image.jpg' with your actual image file */
+
+ /* Ensures the image covers the area */
+ background: url("Images/home.jfif") no-repeat center center/cover;
+  height: 500PX; /* Set the height of your banner */
+  position: relative; /* Essential for containing the curved element */
+  z-index: 1; /* Keep the banner behind the form */
+}
+
+/* Optional: Adding the curved bottom white edge seen in your image */
+.donation-banner::after {
+  content: '';
+  position: absolute;
+  bottom: -50px; /* Adjust this value to control the curve position */
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 2; /* Place the curve above the main background, but below the form */
+}
+
+
+/* 2. Form Container Positioning (The pop-out effect) */
+.donation-form-container {
+  margin-top: -200px; /* PULLS THE FORM UP OVER THE BANNER IMAGE! Adjust this value to control the overlap */
+  position: relative; 
+  z-index: 10; /* Ensures the form is always on top of the banner and the curve */
+}
+
+/* 3. General Styling Adjustments */
+.pop-out-card {
+  /* Use a slightly stronger shadow to emphasize the pop-out */
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2) !important; 
+}
+
+/* Custom width for form labels to align fields neatly */
+.form-label-width {
+  min-width: 100px; 
+}
+
+/* Custom button style (as in previous response) */
+.custom-green-btn {
+  background-color: #5cb85c;
+  color: white;
+  border-color: #4cae4c;
+  border-radius: 0.25rem;
+}
+
+
+
+   /* Events Section */
+   .events-gallery {
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+.events-section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.event-poster-card {
+    overflow: hidden;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-poster-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.event-poster-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.card-body p {
+    margin-bottom: 0;
+}
+
+/* Animation */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUpAnim 0.8s ease-out forwards;
+}
+
+@keyframes fadeUpAnim {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
+    .event-poster-card img {
+        height: 200px;
+    }
+}
+
+/* Footer Custom Styling */
+/* -------------------------------------- */
+
+.footer-section {
+  /* Creates the dark, subtle gradient background */
+  background: linear-gradient(to right, #333333, #1a1a1a);
+  color: #f8f9fa; /* Light text color */
+  font-size: 0.9rem;
+}
+
+.footer-logo {
+  /* Style for the logo image */
+  max-width: 60px; /* Adjust size as needed */
+  height: auto;
+  display: block; /* Important for alignment */
+  /* Center logo on mobile, left align on desktop */
+  margin: 0 auto;
+}
+
+/* Style for the policy links and copyright text */
+.footer-links a,
+.footer-copyright {
+  color: #e9ecef; /* Slightly lighter white for readability */
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 15px; /* Spacing for the links */
+  /* Pushes the policy links/copyright text left on desktop */
+  text-align: left; 
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+/* Social Icons Container */
+.social-icons {
+  display: flex;
+  justify-content: center; /* Center icons on mobile */
+  gap: 15px;
+}
+
+/* Bootstrap utility for text-md-end ensures icons align right on medium screens and up */
+@media (min-width: 768px) {
+  .social-icons {
+      justify-content: flex-end; /* Align icons to the right on desktop */
+  }
+  .footer-logo {
+      margin: 0; /* Remove auto margin to align left on desktop */
+  }
+}
+
+/* Individual Social Icon Style */
+.social-icon {
+  color: #f8f9fa; /* White/light color */
+  font-size: 1.5rem; /* Large icon size */
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #dc3545; /* Optional: Red hover effect */
+}
+
